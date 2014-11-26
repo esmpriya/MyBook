@@ -1,0 +1,76 @@
+<!DOCTYYPE html>
+<html>
+<head>
+	<title>MainPage</title>
+	<link rel="stylesheet" type="text/css" href="./styles/css/mybook.css">
+	<link rel="stylesheet" type="text/css" href="./styles/css/feed.css">
+	<link rel="stylesheet" type="text/css" href="./styles/css/profile.css">
+</head>
+<body>
+	<div class="header">
+		<div class="title">
+			<h1>MyBook</h1>
+		</div>
+		<div class="sign-out">
+			<form name="signOutForm" action="./index.html">
+				<input id="signOut" value="Sign out" type="submit">
+			</form>
+		</div>
+	</div>
+	<div class="main">
+		<div class="menu">
+			<div>
+				<button class="nav-btn1" id="feedBtn" type="button" onclick="onFeedClick()">Feed</button>
+				<button class="nav-btn2" id="profileBtn" type="button" onclick="onProfileClick()">Profile</button>
+			</div>
+		</div>
+		<div class="content">
+			<div id="feed">
+			    <div class="feed-new" id="newFeed" >
+				    <input class="feed-text" id="feedText" placeholder="Text or URL feed here..." onFocus="focusFeedText()"/>
+				    <button class="post-btn" id="postBtn" type="button" disabled onclick="postFeed()">Post</button>
+			    </div>
+			    <div class="feeds" id="feeds">
+			    </div>
+			</div>
+			<div class="profile" id="profile">
+				<div class="prf-detail">
+					<form id="profile-form">
+						<div>
+							<label class="required">*</label>
+							<input class="prf-field" id="name" placeholder="Name" required onchange="onNameChange()"/>
+						</div>
+						<div>
+							<label class="required">*</label>
+							<input class="prf-field" id="age" placeholder="Age" required onchange="onAgeChange()"/>
+						</div>
+						<div>
+							<label class="required">*</label>
+							<input class="prf-field" id="phone" placeholder="Phone" required onchange="onPhoneChange()"/>
+						</div>
+						<div>
+							<label class="required">*</label>
+							<input class="prf-field" id="email" type="email" placeholder="Email" required onchange="onEmailChange()"/>
+						</div>
+						<div><textarea class="prf-field" id="address" rows="4" cols="30" placeholder="Address"></textarea></div>
+						<div>
+							<input class="prf-field" id="imageChooser" type="file" name="pic" accept="image/*" onchange="displayImage(this)">
+						</div>
+						<div>
+							<input class="prf-field" id="save" type="submit" disabled/>
+						</div>
+					</form>
+				</div>
+				<div class="image-displayer" id="imageDisplayer">
+					<img class="img" id="profile-img"></img>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer">Talent Improving exercise, OFS</div>
+
+	<script src="./js/main/main.js" async defer></script>
+	<script src="./js/feed/feed.js"></script>
+	<script src="./js/profile/profile.js"></script>
+</body>
+</html>

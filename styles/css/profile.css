@@ -1,0 +1,30 @@
+.profile {
+	margin:	20px;
+}
+
+.prf-detail {
+	float: left;
+	height: 100%;
+	padding-left: 25%;
+}
+
+.required {
+	color: red;
+}
+
+.prf-field {
+	margin-top: 20px
+}
+
+.image-displayer {
+	float: left;
+	height: 100%;
+	width: 35%;
+}
+
+.img {
+	height: 152px;
+	width: 229px;
+	margin: 15px;
+	margin-top: 25%;
+}
